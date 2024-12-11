@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+<div class="wrapper">
+    <div class="img">
+    <img alt="">
+     </div>
+    <form action="" >
+    <input type="file" name="dance" id="" value="select your image" accept="image/png,image/jpeg" multiple size="12byte" >
+    </form>
+    </div>
+    <script>
+
+     const file1 = document.querySelector("input");
+     
+     const image1 =   document.querySelector("img");
+     console.log( JSON.parse(localStorage.getItem('file')) );
+    //  image1=JSON.parse(localStorage.getItem('file'))
+     file1.addEventListener('change',(e)=>
+    
+    {
+        image1.src=URL.createObjectURL(e.target.files[JSON.parse(localStorage.getItem('file')) ,0]) 
+    })
+        
+        console.log( JSON.parse(localStorage.getItem('file')) );
+   
+    localStorage.setItem('file',JSON.stringify(file1.value))
+    
+    //   file1.addEventListener('change',(e)=>
+    // {
+    //  image1.src=URL.createObjectURL(e.target.files[0])
+    // })
+    </script>
+</body>
+</html>
